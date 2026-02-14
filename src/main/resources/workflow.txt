@@ -1,0 +1,39 @@
+Livret, Flyer, Powerpoint, Dépliant.
+
+Flyer
+
+Entrée :
+
+Fichiers :
+    Possibilité 1 :
+    1. Fichier : exemple brute et brouillon
+    2. Fichier : document qui explique ce qu'il faut faire
+
+    Possibilité 2 :
+    1. Fichier : document qui explique ce qu'il faut faire
+
+    Possibilité 3 :
+    1. Fichier : document qui comporte juste le texte du flyer et les objectifs
+
+Autres metadata :
+    Cibles du document : entreprises, employés corpos, enfants, ...
+
+Output :
+- Flyer avec design amélioré (même taille que le brouillon)
+- Des nouvelles couleurs
+- Le layout ne change pas beaucoup par rapport au fichier demandé.
+
+
+Comment le concepteur travaille :
+- Il reçoit les entrées.
+- Il va sur freepik pour trouver des inspirations de flyers (recherche par exemple : brochure sur le vin).
+- Il essaie d'implémenter un modèle sur Canva.
+- Il envoie un exemple de modèle au donneur d'ordre.
+- Le donneur d'ordre va juste dire si c'est bon ou pas.
+- Il implémente sur Canva le modèle.
+
+Le problème :
+- Débuter la reflexion pour un design.
+- Trouver le design dans un temps limité.
+- La créativité est passagère.
+- Le donneur d'ordre veut toujours faire des changements.
