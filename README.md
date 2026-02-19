@@ -33,6 +33,60 @@ Next focus:
 - Add validation checks to reduce hallucinations.
 - Keep a human approval step before final output.
 
+## Architecture Schema
+
+```text
+User Input
+(raw brief + reference image + wording constraints)
+    |
+    v
+ReceiverController
+(GET /receiver/chat)
+    |
+    v
+DesignGenerationService
+(orchestration + monitoring logs)
+    |
+    +--> 1) SpecExtractionService
+    |         |
+    |         v
+    |     Spec Validation
+    |     (6 panels + missing input checks)
+    |         |
+    |         +--> invalid -> Validation Failure Response (request stops)
+    |         |
+    |         +--> valid
+    |                |
+    +---------------> v
+              2) StyleProposalService
+              (generate 5 creative styles)
+                       |
+                       v
+                 Style Validation
+                 (count + consistency)
+                       |
+                       +--> invalid -> Validation Failure Response (request stops)
+                       |
+                       +--> valid
+                              |
+                              v
+                        Select style
+                              |
+                              v
+                    3) HtmlRenderService
+                       (final HTML/CSS)
+                              |
+                              v
+                      Render Validation
+                  (exact wording + panels)
+                              |
+                +-------------+-------------+
+                |                           |
+                v                           v
+      Success Response              Validation Failure Response
+      (validated HTML/CSS)          (request stops, no auto-loop)
+```
+
 ## Current Outcome
 The project already demonstrates a first end-to-end flow:
 - from draft/reference input,
